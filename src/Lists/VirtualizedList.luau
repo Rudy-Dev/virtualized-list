@@ -2191,7 +2191,7 @@ function VirtualizedList:_onCellLayout(rbx: Frame, cellKey: string, index: numbe
 			[React.Change.AbsoluteSize] does not handle all of the edge cases of onLayout, since
 			some items are always rendered and we do not recalculate layout for these items. React
 			Native will calculate the relative position change of these items based on AbsolutePosition
-			changes, but this is too expensive to do in Roact via [React.Change.AbsolutePosition].
+			changes, but this is too expensive to do in React via [React.Change.AbsolutePosition].
 		]]
 		if curr and not self.props.getItemLayout and math.abs(next_.length - curr.length) >= 1 then
 			if self.props.UNSTABLE_forceSiblingLayoutUpdate then

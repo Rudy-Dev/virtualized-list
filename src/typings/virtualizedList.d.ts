@@ -1,4 +1,4 @@
-import Roact from "@rbxts/roact";
+import React from "@rbxts/React";
 import { ScrollViewProps } from "./scrollView";
 import { LayoutChangeEvent } from "./unimplemented";
 
@@ -17,7 +17,7 @@ export interface ListRenderItemInfo<ItemT> {
     };
 }
 
-export type ListRenderItem<ItemT> = (info: ListRenderItemInfo<ItemT>) => Roact.Element | null;
+export type ListRenderItem<ItemT> = (info: ListRenderItemInfo<ItemT>) => React.Element | null;
 
 export interface ViewToken {
     item: any;
@@ -74,19 +74,19 @@ export interface VirtualizedListWithoutRenderItemProps<ItemT> extends ScrollView
      * Rendered when the list is empty. Can be a React Component Class, a render function, or
      * a rendered element.
      */
-    ListEmptyComponent?: Roact.ComponentType<any> | Roact.Element | null | undefined;
+    ListEmptyComponent?: React.ComponentType<any> | React.Element | null | undefined;
 
     /**
      * Rendered at the bottom of all the items. Can be a React Component Class, a render function, or
      * a rendered element.
      */
-    ListFooterComponent?: Roact.ComponentType<any> | Roact.Element | null | undefined;
+    ListFooterComponent?: React.ComponentType<any> | React.Element | null | undefined;
 
     /**
      * Rendered at the top of all the items. Can be a React Component Class, a render function, or
      * a rendered element.
      */
-    ListHeaderComponent?: Roact.ComponentType<any> | Roact.Element | null | undefined;
+    ListHeaderComponent?: React.ComponentType<any> | React.Element | null | undefined;
 
     /**
      * The default accessor functions assume this is an Array<{key: string}> but you can override
@@ -223,7 +223,7 @@ export interface VirtualizedListWithoutRenderItemProps<ItemT> extends ScrollView
     /**
      * Render a custom scroll component, e.g. with a differently styled `RefreshControl`.
      */
-    renderScrollComponent?: ((props: ScrollViewProps) => Roact.Element) | undefined;
+    renderScrollComponent?: ((props: ScrollViewProps) => React.Element) | undefined;
 
     /**
      * Amount of time between low-pri item render batches, e.g. for rendering items quite a ways off
@@ -244,13 +244,13 @@ export interface VirtualizedListWithoutRenderItemProps<ItemT> extends ScrollView
      */
     windowSize?: number | undefined;
 
-    CellRendererComponent?: Roact.ComponentType<any> | undefined;
+    CellRendererComponent?: React.ComponentType<any> | undefined;
 }
 
 /**
  * @see https://reactnative.dev/docs/virtualizedlist
  */
-export class VirtualizedList<ItemT> extends Roact.Component<VirtualizedListProps<ItemT>> {
+export class VirtualizedList<ItemT> extends React.Component<VirtualizedListProps<ItemT>> {
     scrollToEnd: (params?: { animated?: boolean | undefined }) => void;
     scrollToIndex: (
         params: {
@@ -272,5 +272,5 @@ export class VirtualizedList<ItemT> extends Roact.Component<VirtualizedListProps
 
     recordInteraction: () => void;
 
-	public render(): Roact.Element | undefined; // OverHash deviation: patch for roact typings
+	public render(): React.Element | undefined; // OverHash deviation: patch for React typings
 }

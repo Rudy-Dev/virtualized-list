@@ -1,4 +1,4 @@
-import Roact from "@rbxts/roact";
+import React from "@rbxts/React";
 import { Constructor } from "./shared";
 import { ColorValue, ScrollEvent, ScrollResponderEvent, StyleProp, ViewStyle } from "./unimplemented";
 import { Touchable, ViewProps } from "./view";
@@ -454,7 +454,7 @@ export interface ScrollViewProps extends ViewProps, ScrollViewPropsIOS, ScrollVi
      * A RefreshControl component, used to provide pull-to-refresh
      * functionality for the ScrollView.
      */
-    refreshControl?: Roact.Element | undefined; // OverHash deviation: originally `React.ReactElement<RefreshControlProps>`
+    refreshControl?: React.Element | undefined; // OverHash deviation: originally `React.ReactElement<RefreshControlProps>`
 
     /**
      * When set, causes the scroll view to stop at multiples of the value of `snapToInterval`.
@@ -517,11 +517,11 @@ export interface ScrollViewProps extends ViewProps, ScrollViewPropsIOS, ScrollVi
      * transforms, for example, when you want your list to have an animated and hidable header.
      * If component have not been provided, the default ScrollViewStickyHeader component will be used.
      */
-    StickyHeaderComponent?: Roact.ComponentType<any> | undefined; // OverHash deviation: originally `React.ComponentType<any>`
+    StickyHeaderComponent?: React.ComponentType<any> | undefined; // OverHash deviation: originally `React.ComponentType<any>`
 }
 
-declare class ScrollViewComponent extends Roact.Component<ScrollViewProps> {
-	public render(): Roact.Element | undefined; // OverHash deviation: implement method for Roact
+declare class ScrollViewComponent extends React.Component<ScrollViewProps> {
+	public render(): React.Element | undefined; // OverHash deviation: implement method for React
 }
 declare const ScrollViewBase: Constructor<ScrollResponderMixin> & typeof ScrollViewComponent;
 export class ScrollView extends ScrollViewBase {
@@ -577,5 +577,5 @@ export class ScrollView extends ScrollViewBase {
      */
     setNativeProps(nativeProps: object): void;
 
-	public render(): Roact.Element | undefined; // OverHash deviation: work with roact typings
+	public render(): React.Element | undefined; // OverHash deviation: work with React typings
 }

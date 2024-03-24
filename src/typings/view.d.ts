@@ -1,4 +1,4 @@
-import Roact from "@rbxts/roact";
+import React from "@rbxts/React";
 import { GestureResponderEvent } from "./unimplemented";
 
 /**
@@ -97,7 +97,7 @@ export interface GestureResponderHandlers {
 export interface ViewProps
     extends GestureResponderHandlers, Touchable
 {
-    children?: Roact.Children;
+    children?: React.ReactChild;
 
     /**
      * Invoked on mount and layout changes with
@@ -122,8 +122,8 @@ export interface ViewProps
  * View maps directly to the native view equivalent on whatever platform React is running on,
  * whether that is a UIView, <div>, android.view, etc.
  */
-declare class ViewComponent extends Roact.Component<ViewProps> {
-	public render(): Roact.Element | undefined; // OverHash deviation
+declare class ViewComponent extends React.Component<ViewProps> {
+	public render(): React.Element | undefined; // OverHash deviation
 }
 declare const ViewBase: typeof ViewComponent;
 

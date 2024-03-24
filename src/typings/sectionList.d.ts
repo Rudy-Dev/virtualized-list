@@ -1,4 +1,4 @@
-import Roact from "@rbxts/roact";
+import React from "@rbxts/React";
 import { ScrollView, ScrollViewProps } from "./scrollView";
 import { NodeHandle, StyleProp, ViewStyle } from "./unimplemented";
 import { ListRenderItemInfo, VirtualizedListWithoutRenderItemProps } from "./virtualizedList";
@@ -26,7 +26,7 @@ export interface SectionBase<ItemT, SectionT = DefaultSectionT> {
 
     renderItem?: SectionListRenderItem<ItemT, SectionT> | undefined;
 
-    ItemSeparatorComponent?: Roact.ComponentType<any> | null | undefined;
+    ItemSeparatorComponent?: React.ComponentType<any> | null | undefined;
 
     keyExtractor?: ((item: ItemT, index: number) => string) | undefined;
 }
@@ -41,7 +41,7 @@ export interface SectionListRenderItemInfo<ItemT, SectionT = DefaultSectionT> ex
 
 export type SectionListRenderItem<ItemT, SectionT = DefaultSectionT> = (
     info: SectionListRenderItemInfo<ItemT, SectionT>,
-) => Roact.Element | null;
+) => React.Element | null;
 
 export interface SectionListProps<ItemT, SectionT = DefaultSectionT>
     extends VirtualizedListWithoutRenderItemProps<ItemT>
@@ -49,17 +49,17 @@ export interface SectionListProps<ItemT, SectionT = DefaultSectionT>
     /**
      * Rendered in between adjacent Items within each section.
      */
-    ItemSeparatorComponent?: Roact.ComponentType<any> | null | undefined;
+    ItemSeparatorComponent?: React.ComponentType<any> | null | undefined;
 
     /**
      * Rendered when the list is empty.
      */
-    ListEmptyComponent?: Roact.ComponentType<any> | Roact.Element | null | undefined;
+    ListEmptyComponent?: React.ComponentType<any> | React.Element | null | undefined;
 
     /**
      * Rendered at the very end of the list.
      */
-    ListFooterComponent?: Roact.ComponentType<any> | Roact.Element | null | undefined;
+    ListFooterComponent?: React.ComponentType<any> | React.Element | null | undefined;
 
     /**
      * Styling for internal View for ListFooterComponent
@@ -69,7 +69,7 @@ export interface SectionListProps<ItemT, SectionT = DefaultSectionT>
     /**
      * Rendered at the very beginning of the list.
      */
-    ListHeaderComponent?: Roact.ComponentType<any> | Roact.Element | null | undefined;
+    ListHeaderComponent?: React.ComponentType<any> | React.Element | null | undefined;
 
     /**
      * Styling for internal View for ListHeaderComponent
@@ -79,7 +79,7 @@ export interface SectionListProps<ItemT, SectionT = DefaultSectionT>
     /**
      * Rendered in between each section.
      */
-    SectionSeparatorComponent?: Roact.ComponentType<any> | Roact.Element | null | undefined;
+    SectionSeparatorComponent?: React.ComponentType<any> | React.Element | null | undefined;
 
     /**
      * A marker property for telling the list to re-render (since it implements PureComponent).
@@ -168,14 +168,14 @@ export interface SectionListProps<ItemT, SectionT = DefaultSectionT>
      * Rendered at the top of each section. Sticky headers are not yet supported.
      */
     renderSectionHeader?:
-        | ((info: { section: SectionListData<ItemT, SectionT> }) => Roact.Element | null)
+        | ((info: { section: SectionListData<ItemT, SectionT> }) => React.Element | null)
         | undefined;
 
     /**
      * Rendered at the bottom of each section.
      */
     renderSectionFooter?:
-        | ((info: { section: SectionListData<ItemT, SectionT> }) => Roact.Element | null)
+        | ((info: { section: SectionListData<ItemT, SectionT> }) => React.Element | null)
         | undefined;
 
     /**
@@ -186,7 +186,7 @@ export interface SectionListProps<ItemT, SectionT = DefaultSectionT>
     /**
      * Render a custom scroll component, e.g. with a differently styled `RefreshControl`.
      */
-    renderScrollComponent?: ((props: ScrollViewProps) => Roact.Element) | undefined;
+    renderScrollComponent?: ((props: ScrollViewProps) => React.Element) | undefined;
 
     /**
      * Note: may have bugs (missing content) in some circumstances - use at your own risk.
@@ -207,7 +207,7 @@ export interface SectionListProps<ItemT, SectionT = DefaultSectionT>
     legacyImplementation?: boolean | undefined;
 }
 
-export class SectionList<ItemT = any, SectionT = DefaultSectionT> extends Roact.Component<
+export class SectionList<ItemT = any, SectionT = DefaultSectionT> extends React.Component<
     SectionListProps<ItemT, SectionT>
 > {
     /**
@@ -241,5 +241,5 @@ export class SectionList<ItemT = any, SectionT = DefaultSectionT> extends Roact.
      */
     getScrollableNode(): NodeHandle | undefined;
 
-	public render(): Roact.Element | undefined; // OverHash deviation: patch for roact typings
+	public render(): React.Element | undefined; // OverHash deviation: patch for React typings
 }
