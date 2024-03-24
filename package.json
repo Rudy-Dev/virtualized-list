@@ -43,6 +43,6 @@
   "dependencies": {
     "@rbxts/flipper": "^2.0.1",
     "@rbxts/luau-polyfill-internal": "^1.2.3-ts.0",
-    "@rbxts/react": "^0.2.0"
+    "@rbxts/react": "^0.3.4"
   }
 }
