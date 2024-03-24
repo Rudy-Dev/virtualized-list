@@ -97,7 +97,7 @@ export interface GestureResponderHandlers {
 export interface ViewProps
     extends GestureResponderHandlers, Touchable
 {
-    children?: React.ReactChild;
+    children?: React.ReactChild | React.ReactChild[];
 
     /**
      * Invoked on mount and layout changes with

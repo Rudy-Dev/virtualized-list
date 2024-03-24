@@ -2,7 +2,7 @@
     "compilerOptions": {
         // required
         "jsx": "react",
-        "jsxFactory": "Roact.createElement",
+        "jsxFactory": "React.createElement",
         "module": "commonjs",
         "moduleResolution": "Node",
         "noLib": true,
