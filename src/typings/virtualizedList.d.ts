@@ -1,4 +1,4 @@
-import React from "@rbxts/React";
+import React from "@rbxts/react";
 import { ScrollViewProps } from "./scrollView";
 import { LayoutChangeEvent } from "./unimplemented";
 

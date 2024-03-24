@@ -1,4 +1,4 @@
-import React from "@rbxts/React";
+import React from "@rbxts/react";
 import { GestureResponderEvent } from "./unimplemented";
 
 /**

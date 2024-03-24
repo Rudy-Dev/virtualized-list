@@ -6,7 +6,7 @@
         "module": "commonjs",
         "moduleResolution": "Node",
         "noLib": true,
-        "forceConsistentCasingInFileNames": false,
+        "forceConsistentCasingInFileNames": true,
         "allowSyntheticDefaultImports": true,
         "moduleDetection": "force",
         "strict": true,

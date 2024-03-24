@@ -1,4 +1,4 @@
-import React from "@rbxts/React";
+import React from "@rbxts/react";
 import { ScrollView, ScrollViewProps } from "./scrollView";
 import { NodeHandle, StyleProp, ViewStyle } from "./unimplemented";
 import { ListRenderItemInfo, VirtualizedListWithoutRenderItemProps } from "./virtualizedList";

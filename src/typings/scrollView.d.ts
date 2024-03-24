@@ -1,4 +1,4 @@
-import React from "@rbxts/React";
+import React from "@rbxts/react";
 import { Constructor } from "./shared";
 import { ColorValue, ScrollEvent, ScrollResponderEvent, StyleProp, ViewStyle } from "./unimplemented";
 import { Touchable, ViewProps } from "./view";

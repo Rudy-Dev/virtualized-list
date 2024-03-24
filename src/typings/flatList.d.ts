@@ -1,4 +1,4 @@
-import React from "@rbxts/React";
+import React from "@rbxts/react";
 import { ScrollViewComponent } from "./scrollView";
 import { StyleProp, ViewStyle } from "./unimplemented";
 import { View } from "./view";
