@@ -15,8 +15,8 @@
 
 local srcWorkspace = script.Parent.Parent
 local Packages = srcWorkspace.Parent
-local React = require(Packages.React)
 local LuauPolyfill = require(Packages.LuauPolyfill)
+local React = require(Packages.react)
 local Object = LuauPolyfill.Object
 
 local FlatList = require(script.Parent.FlatList)

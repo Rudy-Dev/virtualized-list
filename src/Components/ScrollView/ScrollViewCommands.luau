@@ -16,7 +16,7 @@ type Object = LuauPolyfill.Object
 
 -- ROBLOX deviation: inline implementation
 -- local codegenNativeCommands = require(script.Parent.Parent.Parent.Utilities.codegenNativeCommands).default
-local React = require(Packages.React)
+local React = require(Packages.react)
 type React_ElementRef<T> = React.ElementRef<T>
 
 local exports = {}

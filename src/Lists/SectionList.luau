@@ -25,7 +25,7 @@ local exports = {}
 local Platform = {
 	OS = "roblox",
 }
-local React = require(Packages.React)
+local React = require(Packages.react)
 type React_Element<P = Object, T = any> = React.ReactElement<P, T>
 type React_ElementRef<C> = React.ElementRef<C>
 local VirtualizedSectionList = require(script.Parent.VirtualizedSectionList)

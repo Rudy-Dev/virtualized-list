@@ -40,7 +40,7 @@ local AnimatedDiffClamp = {
 type AnimatedDiffClamp = any
 -- local AnimatedNode = require(script.Parent.Parent.Parent.Animated.nodes.AnimatedNode).default
 type AnimatedNode = any
-local React = require(Packages.React)
+local React = require(Packages.react)
 type React_Element<C> = React.Element<C>
 type React_Node = React.Node
 -- ROBLOX deviation: using partial implementation

@@ -18,7 +18,7 @@ local GuiService = game:GetService("GuiService")
 local srcWorkspace = script.Parent.Parent.Parent
 local Packages = srcWorkspace.Parent
 
-local React = require(Packages.React)
+local React = require(Packages.react)
 
 local FlatList = require(script.Parent.Parent.FlatList)
 type FlatList<T> = FlatList.FlatList<T>

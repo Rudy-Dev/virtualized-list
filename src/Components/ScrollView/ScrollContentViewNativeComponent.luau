@@ -19,7 +19,7 @@ local Array = LuauPolyfill.Array
 local Object = LuauPolyfill.Object
 type Object = LuauPolyfill.Object
 
-local React = require(Packages.React)
+local React = require(Packages.react)
 local Change = React.Change
 
 local ScrollContentViewNativeComponent = React.Component:extend("ScrollContentViewNativeComponent")

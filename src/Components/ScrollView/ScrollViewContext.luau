@@ -14,7 +14,7 @@ local Packages = srcWorkspace.Parent
 local LuauPolyfill = require(Packages.LuauPolyfill)
 local Object = LuauPolyfill.Object
 
-local React = require(Packages.React)
+local React = require(Packages.react)
 type React_Context<T> = React.Context<T>
 local exports = {}
 

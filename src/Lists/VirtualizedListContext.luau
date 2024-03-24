@@ -21,7 +21,7 @@ type ReadOnly<T> = T
 -- type VirtualizedList = VirtualizedListModule.VirtualizedList
 type VirtualizedList = Object
 
-local React = require(Packages.React)
+local React = require(Packages.react)
 local useMemo = React.useMemo
 local useContext = React.useContext
 type React_Node = React.Node

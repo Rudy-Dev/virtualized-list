@@ -24,15 +24,15 @@ type ReadOnlyArray<T> = Array<T>
 type Shape<T> = any
 type Diff<T, U> = Object
 
-local invariant = require(srcWorkspace.jsUtils.invariant)
 local ViewabilityHelperModule = require(script.Parent.ViewabilityHelper)
+local invariant = require(srcWorkspace.jsUtils.invariant)
 type ViewToken = ViewabilityHelperModule.ViewToken
 local defaultKeyExtractor = require(script.Parent.VirtualizeUtils).keyExtractor
 
 local View = require(srcWorkspace.Components.View.View)
 local VirtualizedList = require(script.Parent.VirtualizedList)
 
-local React = require(Packages.React)
+local React = require(Packages.react)
 type React_AbstractComponent<Config, Instance> = React.AbstractComponent<Config, Instance>
 type React_ComponentType<P> = React.ComponentType<P>
 type React_Element<Props = Object, ElementType = any> = React.ReactElement<Props, ElementType>

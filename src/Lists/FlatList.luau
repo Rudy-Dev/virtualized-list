@@ -20,8 +20,8 @@ type Object = LuauPolyfill.Object
 type mixed = any
 
 local Platform = { OS = "roblox" }
+local React = require(Packages.react)
 local deepDiffer = require(srcWorkspace.Utilities.differ.deepDiffer)
-local React = require(Packages.React)
 type React_Element_Config<ItemT> = React.ElementConfig<ItemT>
 type React_Node = React.React_Node
 

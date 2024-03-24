@@ -14,7 +14,7 @@ local Packages = srcWorkspace.Parent
 -- ROBLOX deviation: unavailable types
 type ReadOnly<T> = T
 
-local React = require(Packages.React)
+local React = require(Packages.react)
 type ElementRef<C> = React.ElementRef<C>
 type Ref<C> = React.Ref<C>
 

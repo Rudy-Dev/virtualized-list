@@ -69,7 +69,7 @@ Platform = {
 	end,
 }
 
-local React = require(Packages.React)
+local React = require(Packages.react)
 type React_AbstractComponent<Config, Instance> = React.AbstractComponent<Config, Instance>
 -- ROBLOX deviation: using typescript type for React Element
 type React_Element<P = Object, T = any> = React.ReactElement<P, T>

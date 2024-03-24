@@ -70,7 +70,7 @@ local VirtualizeUtilsModule = require(script.Parent.VirtualizeUtils)
 local defaultKeyExtractor = VirtualizeUtilsModule.keyExtractor
 local computeWindowedRenderLimits = VirtualizeUtilsModule.computeWindowedRenderLimits
 
-local React = require(Packages.React)
+local React = require(Packages.react)
 type React_ComponentType<P> = React.ComponentType<P>
 -- ROBLOX deviation: using typescript type for React Element
 type React_Element<P = Object, T = any> = React.ReactElement<P, T>
